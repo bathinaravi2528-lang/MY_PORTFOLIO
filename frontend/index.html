@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="B. Ravi Varma — Professional Full Stack Developer Portfolio." />
+    <title>B. Ravi Varma | Full Stack Developer</title>
+
+    <!-- Professional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Outfit:wght@700;800;900&family=Fira+Code:wght@400;500&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Professional Navigation -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="brand">B. Ravi Varma<span>.</span></a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Technologies</a>
+                <a href="#coding-profiles" class="nav-link">Profiles</a>
+                <a href="#work" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                <span class="sun">☀️</span>
+                <span class="moon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="page-section hero-section">
+        <!-- Animated particle canvas background -->
+        <canvas id="hero-particles"></canvas>
+
+        <!-- Ambient glow orbs -->
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+
+        <!-- Scan line effect -->
+        <div class="hero-scanline"></div>
+
+        <div class="container hero-split">
+            <!-- LEFT: Text Content -->
+            <div class="hero-left">
+                <div class="hero-status-badge reveal">
+                    <span class="status-pulse"></span>
+                    <span>Available for opportunities</span>
+                </div>
+
+                <h1 class="hero-name reveal">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <span class="hero-name-main">B. Ravi<br>Varma</span>
+                </h1>
+
+                <div class="hero-role-wrapper reveal">
+                    <span class="hero-role-prefix">I build</span>
+                    <span class="hero-typed-text" id="typed-role"></span>
+                    <span class="typed-cursor">|</span>
+                </div>
+
+                <p class="hero-description reveal">
+                    CSE-AI student & aspiring Full Stack Developer passionate about crafting
+                    high-performance digital experiences. Turning complex problems into elegant,
+                    intuitive solutions.
+                </p>
+
+                <div class="hero-cta-group reveal">
+                    <a href="#work" class="btn btn-hero-glow">
+                        <span>View Projects</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="Resume.pdf" target="_blank" class="btn btn-hero-outline">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
+
+                <div class="hero-social-row reveal">
+                    <a href="https://github.com/bathinaravi2528-lang" target="_blank" class="hero-social-link"
+                        aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ravi-varma-bathina-b94b59348" target="_blank"
+                        class="hero-social-link" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:bathina.ravi2528@gmail.com" class="hero-social-link" aria-label="Gmail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Visual Element -->
+            <div class="hero-right reveal">
+                <div class="hero-visual-card">
+                    <!-- Floating code snippet -->
+                    <div class="hero-code-window">
+                        <div class="code-window-bar">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-window-title">portfolio.js</span>
+                        </div>
+                        <pre class="code-content"><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"B. Ravi Varma"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"Full Stack Dev"</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-string">"React"</span>, <span class="code-string">"Node.js"</span>,
+    <span class="code-string">"JavaScript"</span>, <span class="code-string">"AI/ML"</span>
+  ],
+  <span class="code-prop">passion</span>: <span class="code-string">"Building the future"</span>,
+  <span class="code-prop">available</span>: <span class="code-bool">true</span>
+};</code></pre>
+                    </div>
+
+                    <!-- Floating stat badges -->
+                    <div class="hero-float-badge badge-top">
+                        <i class="fa-solid fa-code"></i>
+                        <div>
+                            <strong>5+</strong>
+                            <span>Projects</span>
+                        </div>
+                    </div>
+                    <div class="hero-float-badge badge-bottom">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div>
+                            <strong>CSE-AI</strong>
+                            <span>B.Tech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Section 2: About (Dynamic Bento) -->
+    <section id="about" class="page-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-label">Discovery</span>
+                <h2 class="section-title">ABOUT ME</h2>
+            </div>
+            <div class="about-narrative-container reveal">
+                <div class="about-text-content">
+                    <p class="about-lead">
+                        I am a dedicated <strong>Full Stack Developer</strong> and <strong>CSE-AI student</strong> with
+                        a mission to architect digital solutions that bridge the gap between complexity and simplicity.
+                        I believe in software that performs as well as it looks, prioritizing scalability and
+                        user-centric design.
+                    </p>
+                    <p>
+                        With a strong foundation in <strong>HTML, CSS, and modern JavaScript ecosystems</strong>, I am
+                        constantly evolving my stack. Currently, I am diving deep into <strong>Backend
+                            development</strong> and <strong>AI integration</strong>, aiming to build smarter, more
+                        intuitive web applications that solve real-world problems.
+                    </p>
+                    <p>
+                        Studying at <strong>VIIT</strong>, I thrive in collaborative environments and am always looking
+                        for opportunities to contribute to high-impact teams and real-world projects that demand
+                        innovative thinking and technical precision.
+                    </p>
+                </div>
+
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🎯</span>
+                        <span>Driven by impact-led engineering</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">⚡</span>
+                        <span>Rapid learning & technical agility</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🌐</span>
+                        <span>Collaborative & open-minded</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Education (Premium Cards) -->
+    <section id="education" class="page-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-label">Academic Path</span>
+                <h2 class="section-title">Educational<br>Milestones</h2>
+            </div>
+            <div class="edu-landscape-wrapper reveal">
+                <!-- Data Hub -->
+                <!-- <div class="edu-hub">
+                    <div class="hub-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="hub-pulse"></div>
+                </div> -->
+
+                <!-- SVG Connectors -->
+                <!-- <svg class="edu-svg-canvas" viewBox="0 0 1000 600" preserveAspectRatio="none">
+                    <path class="edu-path ssc-path" d="M500,300 C500,150 200,150 200,100" />
+                    <path class="edu-path inter-path" d="M500,300 C500,150 800,150 800,100" />
+                    <path class="edu-path btech-path" d="M500,300 C500,450 500,450 500,500" />
+                </svg> -->
+
+                <!-- Upper Branch (Schooling & Inter) -->
+                <div class="edu-branch-upper">
+                    <!-- SSC -->
+                    <div class="edu-node node-left reveal">
+                        <div class="node-card">
+                            <span class="node-date">2021 — 2022</span>
+                            <h3>Secondary Education</h3>
+                            <p class="node-school">RAVINDRA BHARATHI SCHOOL</p>
+                            <p class="node-desc">Built my initial academic foundation, learning the core fundamentals of
+                                Mathematics, Physics, and Chemistry while first discovering my passion for analytical
+                                problem-solving.</p>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate -->
+                    <div class="edu-node node-right reveal">
+                        <div class="node-card">
+                            <span class="node-date">2022 — 2024</span>
+                            <h3>Intermediate (MPC)</h3>
+                            <p class="node-school">SRI CHAITANYA JUNIOR COLLEGE</p>
+                            <p class="node-desc">Developed strong fundamentals in Mathematics and logical reasoning—the
+                                core building blocks that power algorithms and data structures I utilize in everyday
+                                coding.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lower Branch (B.Tech) -->
+                <div class="edu-branch-lower">
+                    <div class="edu-node node-center reveal">
+                        <div class="node-card">
+                            <span class="node-date">2024 — PRESENT</span>
+                            <h3>B.Tech - CSE (AI)</h3>
+                            <p class="node-school">VIGNAN'S INSTITUTE OF INFO TECH</p>
+                            <p class="node-desc">Diving deep into Artificial Intelligence, data systems, and complex
+                                architectures while mastering modern Full Stack Development. Building real-world
+                                applications that blend robust backend logic with striking frontend experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Skills (Engine) -->
+    <section id="skills" class="page-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-label">Capabilities</span>
+                <h2 class="section-title">TECHNOLOGIES</h2>
+            </div>
+
+            <div class="tech-stack-container reveal">
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                        alt="HTML5">
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                        alt="CSS3">
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                        alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                        alt="React">
+                    <span>React</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js">
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                        alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                        alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C">
+                    <span>C</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                        alt="C++">
+                    <span>C++</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+                    <span>Git</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                        alt="VS Code">
+                    <span>VS Code</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                        alt="GitHub" class="theme-invert">
+                    <span>GitHub</span>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Section: Coding Profiles (Metrics) -->
+    <section id="coding-profiles" class="page-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-label">Metrics</span>
+                <h2 class="section-title">CODING PROFILES</h2>
+            </div>
+
+            <div class="profiles-grid reveal">
+                <!-- LeetCode Card -->
+                <div class="profile-card" id="leetcode-card">
+                    <div class="profile-header">
+                        <div>
+                            <h3>LeetCode</h3>
+                            <span class="profile-handle">@ravi_varma25</span>
+                        </div>
+                        <a href="https://leetcode.com/u/ravi_varma25" target="_blank" class="profile-link-icon">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">TOTAL SOLVED</span>
+                            <span class="stat-value" id="lc-total">---</span>
+                        </div>
+                        <div class="difficulty-bar">
+                            <div class="diff-item">
+                                <span class="diff-label easy">E</span>
+                                <span class="diff-val" id="lc-easy">0</span>
+                            </div>
+                            <div class="diff-item">
+                                <span class="diff-label medium">M</span>
+                                <span class="diff-val" id="lc-medium">0</span>
+                            </div>
+                            <div class="diff-item">
+                                <span class="diff-label hard">H</span>
+                                <span class="diff-val" id="lc-hard">0</span>
+                            </div>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">RANKING</span>
+                            <span class="stat-value small" id="lc-rank">---</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">CONTEST RATING</span>
+                            <span class="stat-value small" id="lc-contest">---</span>
+                        </div>
+                    </div>
+                    <div class="profile-footer active">
+                        <i class="fa-solid fa-satellite-dish"></i> <span id="lc-status">LIVE SYNC ACTIVE</span>
+                    </div>
+                </div>
+
+                <!-- CodeChef -->
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div>
+                            <h3>CodeChef</h3>
+                            <span class="profile-handle">@ravi_varma25</span>
+                        </div>
+                        <a href="https://www.codechef.com/users/ravi_varma25" target="_blank"
+                            class="profile-link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">CURRENT RATING</span>
+                            <span class="stat-value" id="cc-rating">---</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">HIGHEST RATING</span>
+                            <span class="stat-value" id="cc-highest">---</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">PROBLEMS SOLVED</span>
+                            <span class="stat-value" id="cc-solved">---</span>
+                        </div>
+                    </div>
+                    <div class="profile-footer" id="cc-status-footer">
+                        <i class="fa-solid fa-satellite-dish"></i> <span id="cc-status">SYNCING...</span>
+                    </div>
+                </div>
+
+                <!-- HackerRank -->
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div>
+                            <h3>HackerRank</h3>
+                            <span class="profile-handle">@ravi_varma25</span>
+                        </div>
+                        <a href="https://www.hackerrank.com/profile/ravi_varma25" target="_blank"
+                            class="profile-link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="profile-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">PROBLEM SOLVING</span>
+                            <span class="stat-value">5 Star</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">PYTHON</span>
+                            <span class="stat-value">5 Star</span>
+                        </div>
+                    </div>
+                    <div class="profile-footer">
+                        <i class="fa-solid fa-circle-check"></i> VERIFIED
+                    </div>
+                </div>
+            </div> <!-- End profiles-grid -->
+        </div> <!-- End container -->
+    </section>
+
+    <!-- Section 5: Work -->
+    <section id="work" class="page-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-label">Selected Projects</span>
+                <h2 class="section-title">My Works</h2>
+            </div>
+
+            <div class="project-showcase">
+                <!-- Project 1: Portfolio -->
+                <div class="project-item">
+                    <div class="project-image-block reveal-left">
+                        <img src="hero_section.png" alt="Portfolio Preview">
+                    </div>
+                    <div class="project-content-block reveal-right">
+                        <div class="tag-list">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <h3>Portfolio Website</h3>
+                        <p>A premium, high-performance portfolio showcasing Full Stack expertise. Built with modern web
+                            standards and a focus on clean, professional aesthetics.</p>
+                        <div class="project-btn-group">
+                            <a href="https://future-fs-01-two-zeta.vercel.app" target="_blank"
+                                class="btn btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Code Converter AI -->
+                <div class="project-item reverse">
+                    <div class="project-image-block reveal-right">
+                        <img src="code_converter_v2.png" alt="Code Converter AI">
+                    </div>
+                    <div class="project-content-block reveal-left">
+                        <div class="tag-list">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">AI API</span>
+                        </div>
+                        <h3>Code-Converter-AI</h3>
+                        <p>A powerful AI-driven application that converts code between multiple programming languages
+                            instantly. Features a sleek code editor environment and leverages high-end LLMs for precise
+                            translation.</p>
+                        <div class="project-btn-group">
+                            <a href="https://code-conversion-ai-five.vercel.app/" target="_blank"
+                                class="btn btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Mini CRM -->
+                <div class="project-item">
+                    <div class="project-image-block reveal-left">
+                        <img src="mini_crm.png" alt="LeadSync CRM Dashboard">
+                    </div>
+                    <div class="project-content-block reveal-right">
+                        <div class="tag-list">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">Backend</span>
+                        </div>
+                        <h3>Mini CRM (LeadSync)</h3>
+                        <p>A lightweight, efficient Customer Relationship Management system. Developed with a focus on
+                            robust backend architecture and seamless SQLite database integration for managing client
+                            data securely.</p>
+                        <div class="project-btn-group">
+                            <a href="https://mini-crm-backend-edg1.onrender.com/" target="_blank"
+                                class="btn btn-primary">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Contact (Refined) -->
+    <section id="contact" class="page-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-label">Connect</span>
+                <h2 class="section-title">Start A<br>Conversation</h2>
+                <p style="color: var(--text-dim); margin-top: -10px; margin-bottom: 20px; font-size: 1.1rem;">
+                    Have a project in mind or looking for a dedicated Full Stack Developer?
+                    I'm currently available for internships and collaborative ventures.
+                </p>
+            </div>
+
+            <div class="contact-bento">
+                <!-- Info Card -->
+                <div class="contact-info-card reveal">
+                    <div class="info-group">
+                        <span class="info-label">Email Me</span>
+                        <a href="mailto:bathina.ravi2528@gmail.com" class="info-value">bathina.ravi2528@gmail.com</a>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Phone</span>
+                        <a href="tel:8985298680" class="info-value">+91 8985298680</a>
+                    </div>
+                    <div class="info-group">
+                        <span class="info-label">Location</span>
+                        <span class="info-value">India</span>
+                    </div>
+                    <div class="info-socials">
+                        <a href="https://github.com/bathinaravi2528-lang" target="_blank" class="social-btn"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ravi-varma-bathina-b94b59348" target="_blank"
+                            class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="contact-form-card reveal">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="web3forms-contact"
+                        class="contact-form">
+                        <input type="hidden" name="access_key" value="9f8a8f10-290c-4f9a-a85d-99c39b4a5b3f">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Ravi Varma" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="btn btn-hero-glow" style="width: 100%;">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <p id="form-status"
+                            style="display: none; text-align: center; margin-top: 20px; font-weight: 500;"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimal Modern Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-social reveal">
+                <a href="https://github.com/bathinaravi2528-lang" target="_blank" class="social-icon"
+                    aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ravi-varma-bathina-b94b59348" target="_blank" class="social-icon"
+                    aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:bathina.ravi2528@gmail.com" class="social-icon" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <p style="text-align: center;">© 2024 B. Ravi Varma. Built with precision & passion.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
