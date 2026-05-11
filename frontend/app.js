@@ -267,7 +267,10 @@ techCards.forEach(card => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const username = "ravi_varma25";
-    const BASE_URL = "http://127.0.0.1:8000";
+    // Dynamic BASE_URL for local dev vs Vercel deployment
+    const BASE_URL = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost' 
+        ? "http://127.0.0.1:8000" 
+        : "/api";
 
     // --- LEETCODE FETCH ---
     const lcStatusEl = document.getElementById('lc-status');
